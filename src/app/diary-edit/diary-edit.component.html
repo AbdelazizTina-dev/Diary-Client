@@ -1,2 +1,4 @@
-
-<app-diary-form></app-diary-form>
+<div class="container mt-5">
+  <h1 class="mb-5">{{diary ? "Edit diary entry:" : "Add new diary entry:"}}</h1>
+<app-diary-form [diary]="diary" (saveChanges) ="onSaveChanges($event)"></app-diary-form>
+</div>
