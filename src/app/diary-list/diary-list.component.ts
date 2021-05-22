@@ -12,10 +12,10 @@ export class DiaryListComponent implements OnInit {
   public diaries : Diary[];
 
   constructor(private diaryService:DiaryService) {
-    this.diaries = diaryService.getDiaries();
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.diaries = await this.diaryService.getDiaries();
   }
 
 }

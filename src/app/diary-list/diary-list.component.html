@@ -13,7 +13,7 @@
   <div class="blog-card"  *ngFor="let diary of diaries">
     <div class="description">
       <h1 class="mr-auto">{{diary.title}}</h1>
-      <h2>Opening a door to the future</h2>
+      <h2>{{diary.created_at | date:'medium'}}</h2>
       <p>
         {{diary.content}}
       </p>

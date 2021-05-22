@@ -20,20 +20,20 @@ export class DiaryEditComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
     if (id) {
-      this.diary = this.diaryService.getDiary(id);
+      this.diary = await this.diaryService.getDiary(id);
     }
   }
 
-  public onSaveChanges(modDiary: Diary): void {
+  public async onSaveChanges(modDiary: Diary): Promise<void> {
     if (this.diary) {
-      this.diaryService.updateDiary(this.diary.id, modDiary);
+      await this.diaryService.updateDiary(this.diary.id, modDiary);
       this.location.back();
     }
     else {
-      this.diaryService.addDiary(modDiary);
+      await this.diaryService.addDiary(modDiary);
       this.router.navigate(['/diaries']);
     }
   }

@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+.selector {
+  background-image: url("https://www.thepencompany.com/blog/wp-content/uploads/bigstock-An-Overhead-Photo-Of-An-Open-J-264105475-1-1024x683.jpg");
+  background-size: cover;
+}

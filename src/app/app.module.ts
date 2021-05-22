@@ -11,20 +11,25 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     DiaryListComponent,
     DiaryEditComponent,
     DiaryFormComponent,
-    MainPageComponent
+    MainPageComponent,
+    ContactComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
